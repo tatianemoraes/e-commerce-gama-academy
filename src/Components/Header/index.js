@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { useCartContext } from '../../Contexts/CartContext/useCartContext';
 import { VscSearch, VscHeart, VscAccount } from "react-icons/vsc";
 import { BsBag } from "react-icons/bs";
+import { useHistory } from 'react-router-dom';
 import { 
   Container, 
   Search, 
@@ -27,8 +28,8 @@ function Header() {
     }
   }, [cart]);
 
-  console.log(qtdCart.length);
-
+  const history = useHistory();
+ 
   return (
     <Container>
       <Search>
@@ -44,7 +45,7 @@ function Header() {
         <ButtonLike>
           <VscHeart size="25" fill="#858786" />
         </ButtonLike>
-        <ButtonAccount>
+        <ButtonAccount onClick={()=> history.push('/register') }>
           <VscAccount size="25" fill="#858786"/>
         </ButtonAccount>
         <ButtonBag>
