@@ -25,7 +25,7 @@ function Header() {
     if(cart){
       setQtdCart(cart);
     }
-  }, []);
+  }, [cart]);
 
   console.log(qtdCart.length);
 
