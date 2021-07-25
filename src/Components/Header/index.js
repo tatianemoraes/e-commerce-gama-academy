@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext } from 'react';
 import { useCartContext } from '../../Contexts/CartContext/useCartContext';
 import { VscSearch, VscHeart, VscAccount } from "react-icons/vsc";
 import { BsBag } from "react-icons/bs";
