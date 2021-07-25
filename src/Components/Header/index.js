@@ -19,15 +19,8 @@ import {
 
 function Header() {
 
-  const [qtdCart, setQtdCart] = useState([]);
   const { cart } = useContext(useCartContext);
  
-  useEffect(() => {
-    if(cart){
-      setQtdCart(cart);
-    }
-  }, [cart]);
-
   const history = useHistory();
  
   return (
